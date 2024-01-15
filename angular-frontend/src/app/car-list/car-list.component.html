@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> cars </title>
+</head>
+<body>
+  <h1 class="text-center mt-4"> Car list </h1>
+  <table class="container table mt-4 text-center table-bordered table-hover">
+    <thead>
+    <tr class="table-success">
+      <th scope="col">#</th>
+      <th scope="col"> Name </th>
+      <th scope="col"> Color </th>
+      <th scope="col"> Top speed </th>
+      <th scope="col"> Horse power </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let car of cars">
+      <th scope="row" *ngIf="cars"> {{ cars.indexOf(car) + 1 }} </th>
+      <td> {{ car.name }} </td>
+      <td> {{ car.color }} </td>
+      <td> {{ car.topSpeed }} </td>
+      <td> {{ car.horsePower }} </td>
+    </tr>
+    </tbody>
+  </table>
+</body>
+</html>
