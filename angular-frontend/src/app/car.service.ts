@@ -16,7 +16,19 @@ export class CarService {
     return this.httpClient.get<Car[]>(`${this.baseUrl}`) ;
   }
 
+  getSingleCar(id: number | undefined) {
+    return this.httpClient.get<Car>(`${this.baseUrl}/${id}`) ;
+  }
+
   createNewCar(car: Car) {
     return this.httpClient.post<Car>(`${this.baseUrl}` , car) ;
+  }
+
+  updateCar(id: number | undefined, car: Car) {
+    return this.httpClient.put<Car>(`${this.baseUrl}/${id}` , car) ;
+  }
+
+  deleteCar(id: number | undefined) {
+    return this.httpClient.delete<Car>(`${this.baseUrl}/${id}`) ;
   }
 }

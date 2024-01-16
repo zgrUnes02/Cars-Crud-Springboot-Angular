@@ -8,13 +8,15 @@ import {HttpClientModule} from "@angular/common/http";
 import { CreateCarComponent } from './create-car/create-car.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {FormsModule} from "@angular/forms";
+import { UpdateCarComponent } from './update-car/update-car.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarListComponent,
     CreateCarComponent,
-    NavbarComponent
+    NavbarComponent,
+    UpdateCarComponent
   ],
     imports: [
         BrowserModule,
