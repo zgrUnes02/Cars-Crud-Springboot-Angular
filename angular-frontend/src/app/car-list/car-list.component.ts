@@ -27,8 +27,9 @@ export class CarListComponent implements OnInit {
   }
 
   deleteCar(id: number | undefined) {
-    // this.carService.deleteCar(id).subscribe((response) => {
-    //   console.log
-    // })
+    this.carService.deleteCar(id).subscribe((response) => {
+      console.log("The car has been deleted with success !") ;
+      this.cars = this.cars?.filter(car => car.id != id) ;
+    })
   }
 }
