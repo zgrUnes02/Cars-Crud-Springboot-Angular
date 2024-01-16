@@ -27,8 +27,8 @@ public class CarService {
     }
 
     // create new car
-    public CarEntity createNewCar(CarEntity carEntity) {
-        return carRepository.save(carEntity) ;
+    public void createNewCar(CarEntity carEntity) {
+        carRepository.save(carEntity) ;
     }
 
     // update single car
