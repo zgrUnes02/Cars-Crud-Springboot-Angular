@@ -34,8 +34,8 @@
       <td> {{ car.topSpeed }} </td>
       <td> {{ car.horsePower }} </td>
       <td id="btn_td">
-        <a title="edit" href="#" class="btn btn-outline-primary"> <i class='bx bx-edit-alt'></i> </a>
-        <a title="delete" href="#" class="btn btn-outline-danger"> <i class='bx bx-trash' ></i> </a>
+        <button title="edit" (click)="editCar(car.id)" class="btn btn-outline-primary"> <i class='bx bx-edit-alt'></i> </button>
+        <button title="delete" (click)="deleteCar(car.id)" class="btn btn-outline-danger"> <i class='bx bx-trash' ></i> </button>
       </td>
     </tr>
     </tbody>

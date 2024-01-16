@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Car} from "../car";
 import {CarService} from "../car.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-car-list',
@@ -18,10 +19,16 @@ export class CarListComponent implements OnInit {
     })
   }
 
-  constructor( private carService : CarService) {
+  constructor( private carService : CarService , private router: Router) {
   }
 
-  onDelete(id: number) {
-    console.log(id)
+  editCar(id: number | undefined) {
+    this.router.navigate(["/cars/update" , id]) ;
+  }
+
+  deleteCar(id: number | undefined) {
+    // this.carService.deleteCar(id).subscribe((response) => {
+    //   console.log
+    // })
   }
 }

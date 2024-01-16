@@ -34,9 +34,9 @@ public class CarController {
     }
 
     // update single car :
-    @RequestMapping(method = RequestMethod.PUT , value = "/cars")
-    public void updateSingleCar(@RequestBody CarEntity carEntity) {
-        carService.updateSingleCar(carEntity);
+    @RequestMapping(method = RequestMethod.PUT , value = "/cars/{id}")
+    public void updateSingleCar(@PathVariable Integer id , @RequestBody CarEntity carEntity) {
+        carService.updateSingleCar(id , carEntity);
     }
 
     // delete single car :

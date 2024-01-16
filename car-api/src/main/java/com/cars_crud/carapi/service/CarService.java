@@ -32,8 +32,18 @@ public class CarService {
     }
 
     // update single car
-    public void updateSingleCar(CarEntity carEntity) {
-        carRepository.save(carEntity) ;
+    public void updateSingleCar(Integer id , CarEntity carEntity) {
+        // get car by id
+        CarEntity carWantToUpdate = carRepository.findById(id).get() ;
+
+        // update properties
+        carWantToUpdate.setName(carEntity.getName());
+        carWantToUpdate.setColor(carEntity.getColor());
+        carWantToUpdate.setTopSpeed(carEntity.getTopSpeed());
+        carWantToUpdate.setHorsePower(carEntity.getHorsePower());
+
+        // save
+        carRepository.save(carWantToUpdate) ;
     }
 
     // delete single car
