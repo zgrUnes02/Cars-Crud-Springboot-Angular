@@ -37,12 +37,12 @@ This project is a demonstration of a full-stack web application implementing CRU
 ## Build And Run
 
 1. Install dependencies for the frontend:
-   a - cd angular-frontend/
-   b - npm install
-   c - ng serve
-   d - Access the application at http://localhost:4200 in your browser.
+   - cd angular-frontend/
+   - npm install
+   - ng serve
+   - Access the application at http://localhost:4200 in your browser.
 
 2. Install dependencies for the frontend:
-   a - cd car-api/
-   b - ./mvnw spring-boot:run
+   - cd car-api/
+   - ./mvnw spring-boot:run
 
