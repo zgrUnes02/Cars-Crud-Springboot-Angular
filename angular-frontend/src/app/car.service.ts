@@ -8,9 +8,15 @@ import {Car} from "./car";
 
 export class CarService {
 
+  private baseUrl: string = "http://localhost:8080/cars" ;
+
   constructor( private httpClient : HttpClient ) { }
 
   getAllCars() {
-    return this.httpClient.get<Car[]>("http://localhost:8080/cars") ;
+    return this.httpClient.get<Car[]>(`${this.baseUrl}`) ;
+  }
+
+  createNewCar(car: Car) {
+    return this.httpClient.post<Car>(`${this.baseUrl}` , car) ;
   }
 }

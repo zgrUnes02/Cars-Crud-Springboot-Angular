@@ -20,4 +20,8 @@ export class CarListComponent implements OnInit {
 
   constructor( private carService : CarService) {
   }
+
+  onDelete(id: number) {
+    console.log(id)
+  }
 }
